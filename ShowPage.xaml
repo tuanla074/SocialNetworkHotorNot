@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="HotRater.ShowPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HotRater"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" SizeChanged="Page_SizeChanged">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="listBoxobj" BorderThickness="2" BorderBrush="Black"  Margin="81,287,57,56" SelectionChanged="listBoxobj_SelectionChanged" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border Margin="5" BorderBrush="Black" BorderThickness="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Margin="5,0,0,0" Grid.Row="0" x:Name="NameTxt" TextWrapping="Wrap" Text="{Binding Name}" FontSize="28" Foreground="Black"/>
+                                <TextBlock Grid.Row="0" Text=">" FontSize="28"  HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="Black"/>
+                                <TextBlock Margin="5,0,0,0" Grid.Row="1" x:Name="PhoneTxt"  TextWrapping="Wrap" Foreground="Black" FontSize="18" Text="{Binding Rating }" />
+
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Button Content="Back to Main" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="127" Margin="612,94,0,0" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="132" Name="Image" Source="Assets/StoreLogo.png" Margin="82,15,0,0" VerticalAlignment="Top" Width="155" RenderTransformOrigin="0.497,0.067"/>
+        <TextBlock HorizontalAlignment="Left" Margin="81,151,0,0" Name="Name" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="103" Width="149"/>
+        <TextBox Name="SearchName" HorizontalAlignment="Left" Margin="334,54,0,0" Text="" VerticalAlignment="Top" Width="131"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="334,102,0,0" VerticalAlignment="Top" Width="131" Click="Button_Click_1"/>
+    </Grid>
+</Page>

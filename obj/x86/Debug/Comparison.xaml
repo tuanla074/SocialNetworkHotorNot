@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="HotRater.Comparison"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HotRater"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,10,10,10">
+        <StackPanel x:ConnectionId='1' Name="Stack" Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Left" Margin="190,10,0,0" Text="Who is 01110000 01110010 01100101 01110100 01110100 01101001 01100101 01110010?" TextWrapping="Wrap" FontSize="20" VerticalAlignment="Top" Height="101" Width="314"/>
+            <StackPanel Orientation="Horizontal">
+                <Image x:ConnectionId='5' Name="img1" HorizontalAlignment="Left" Source="Assets/StoreLogo.png"  Height="185"  Margin="110,10,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.893,0.595"                     />
+                <Image x:ConnectionId='6' x:Name="img2" HorizontalAlignment="Left" Source="Assets/StoreLogo.png"   Height="185"  Margin="172,10,0,0" VerticalAlignment="Top" Width="156"                     />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='3' Name="btn1" Content="" HorizontalAlignment="Left" Margin="104,10,-14,10" VerticalAlignment="Top" Width="165" Height="32"                     />
+                <Button x:ConnectionId='4' Name="btn2" Content="" HorizontalAlignment="Left" Margin="169,10,0,10" VerticalAlignment="Top" Width="162" Height="32"                       />
+            </StackPanel>
+            <Button x:ConnectionId='2' Name="Donebtn" Content="Done" HorizontalAlignment="Left" Margin="104,10,0,0" VerticalAlignment="Top"                        Width="479"/>
+        </StackPanel>
+    </Grid>
+
+</Page>
+
